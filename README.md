@@ -1,4 +1,4 @@
-#Android 文本样式
+# Android 文本样式
 
 最近用到文本样式相关的技能，在这里做一下用法记录和总结。实现样式的方法很多，我收录了我所知道的样式类及其用法，还包含了常用的静态和动态表情样式。如果还还发现了不错的方法，后续会补充。
 
@@ -12,7 +12,7 @@ Spanned.SPAN_INCLUSIVE_EXCLUSIVE --- 包含两端start，但不包含end所在�
 Spanned.SPAN_INCLUSIVE_INCLUSIVE--- 包含两端start和end所在的端点 [a,b]
 ```
 
-##AbsoluteSizeSpan / 字体大小样式
+## AbsoluteSizeSpan / 字体大小样式
 字体大小以px为单位，用dp的话需要转  
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/absoluteSizeSpan.png)
 
@@ -27,7 +27,7 @@ Spanned.SPAN_INCLUSIVE_INCLUSIVE--- 包含两端start和end所在的端点 [a,b]
         spn.setSpan(ass25, small.length() + standard.length(), small.length() + standard.length() + big.length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##AlignmentSpan / 对齐样式
+## AlignmentSpan / 对齐样式
 左中右，需要textview设置成 match_parent 才看得出效果  
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/alignmentSpan.png)
 
@@ -47,7 +47,7 @@ Spanned.SPAN_INCLUSIVE_INCLUSIVE--- 包含两端start和end所在的端点 [a,b]
         spn.setSpan(asOpposite, l1 + l2, l1 + l2 + l3, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##BackgroundColorSpan / 背景样式
+## BackgroundColorSpan / 背景样式
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/backgroundColorSpan.png)
 
 ```
@@ -66,7 +66,7 @@ Spanned.SPAN_INCLUSIVE_INCLUSIVE--- 包含两端start和end所在的端点 [a,b]
         spn.setSpan(bcsYellow, l1 + l2, l1 + l2 + l3, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##BulletSpan / 着重样式
+## BulletSpan / 着重样式
 会在文本前面加一个小圆点  
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/bulletSpan.png)
 
@@ -89,7 +89,7 @@ Spanned.SPAN_INCLUSIVE_INCLUSIVE--- 包含两端start和end所在的端点 [a,b]
         spn.setSpan(bs3, l1 + l2, l1 + l2 + l3, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##DrawableMarginSpan / 图片+Margin样式
+## DrawableMarginSpan / 图片+Margin样式
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/drawableMarginSpan.png)
 
 ```
@@ -106,7 +106,7 @@ Spanned.SPAN_INCLUSIVE_INCLUSIVE--- 包含两端start和end所在的端点 [a,b]
         spn.setSpan(dmsBottom, l1 + l2, l1 + l2 + l3, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         txtResult.setText(spn);
 ```
-##ForegroundColorSpan / 字体颜色样式
+## ForegroundColorSpan / 字体颜色样式
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/foregroundColorSpan.png)
 
 ```
@@ -124,7 +124,7 @@ Spanned.SPAN_INCLUSIVE_INCLUSIVE--- 包含两端start和end所在的端点 [a,b]
         spn.setSpan(fcsYellow, l1 + l2, l1 + l2 + l3, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         txtResult.setText(spn);
 ```
-##ImageSpan / 图片样式
+## ImageSpan / 图片样式
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/imageSpan.png)
 
 ```
@@ -144,7 +144,7 @@ Spanned.SPAN_INCLUSIVE_INCLUSIVE--- 包含两端start和end所在的端点 [a,b]
         spn.setSpan(is4, 28, 29, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##LeadingMarginSpan / 文本缩进的样式
+## LeadingMarginSpan / 文本缩进的样式
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/leadingMarginSpan.png)
 
 ```
@@ -161,7 +161,7 @@ Spanned.SPAN_INCLUSIVE_INCLUSIVE--- 包含两端start和end所在的端点 [a,b]
         spn.setSpan(lms, 0, l1 + l2 + l3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##MaskFilter / 滤镜样式
+## MaskFilter / 滤镜样式
 BlurMaskFilter ,指定了一个模糊的样式和半径来处理Paint的边缘
 EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显示空白。
 
@@ -180,7 +180,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(mfsEmboss, l1, l1 + l2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##QuoteSpan / 引用样式
+## QuoteSpan / 引用样式
 自带的引用样式是一条竖线，引号是通过 字体大小样式 和 字体颜色样式组合实现的
 
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/quoteSpan.png)
@@ -206,7 +206,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
 
         txtResult.setText(spn);
 ```
-##RelativeSizeSpan / 相对大小样式
+## RelativeSizeSpan / 相对大小样式
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/relativeSizeSpan.png)
 
 ```
@@ -226,7 +226,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(rss3, l1 + l2, l1 + l2 + l3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##ScaleXSpan / 横向缩放样式
+## ScaleXSpan / 横向缩放样式
 ![ScaleXSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/scaleXSpan.png)
 
 ```
@@ -247,7 +247,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(rss3, l1 + l2, l1 + l2 + l3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##StrikethroughSpan / 删除线样式
+## StrikethroughSpan / 删除线样式
 ![StrikethroughSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/strikethroughSpan.png)
 
 ```
@@ -258,7 +258,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(ss, 40, l1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##StyleSpan / 字体风格样式
+## StyleSpan / 字体风格样式
 主要是加粗，斜体
 
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/styleSpan.png)
@@ -278,7 +278,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(ssBI, 26, l1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##SubscriptSpan / 下标样式
+## SubscriptSpan / 下标样式
 如化学元素的角标
 
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/subscriptSpan.png)
@@ -291,7 +291,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(new SubscriptSpan(), 10, 11, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##SuperscriptSpan / 上标样式
+## SuperscriptSpan / 上标样式
 如数学的平方公式
 
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/superscriptSpan.png)
@@ -304,7 +304,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(new SuperscriptSpan(), 7, 8, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         txtResult.setText(spn);
 ```
-##TabStopSpan / 制表位偏移样式
+## TabStopSpan / 制表位偏移样式
 感觉区别不是很大
 
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/tabStopSpan.png)
@@ -317,7 +317,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(tss, 0, para1.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##TextAppearanceSpan / style文件定义样式
+## TextAppearanceSpan / style文件定义样式
 ![TextAppearanceSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/textAppearanceSpan.png)
 
 通过xml配置来处理文本样式
@@ -357,7 +357,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(tas4, l1 + l2 + l3, l1 + l2 + l3 + l4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##TypefaceSpan / 字体样式
+## TypefaceSpan / 字体样式
 默认只支持android自带的三种字体，要用其他字体需要重写一个 TpyefaceSpan 这个类
 
 ![AbsoluteSizeSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/typefaceSpan.png)
@@ -384,7 +384,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(typeFont, l1 + l2 + l3, l1 + l2 + l3 + l4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##UnderlineSpan / 下划线样式
+## UnderlineSpan / 下划线样式
 ![UnderlineSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/underlineSpan.png)
 
 ```
@@ -396,7 +396,7 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         spn.setSpan(us, l1, l1 + l2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtResult.setText(spn);
 ```
-##URLSpan / 超链接样式
+## URLSpan / 超链接样式
 超链接样式，点击文本可以跳转到网页
 
 ![URLSpan](https://github.com/YvanMao/TextStyle/blob/master/capture/urlSpan.png)
@@ -414,8 +414,8 @@ EmbossMaskFilter ,在android4.0以上已经无效了,我android7.0上直接显�
         //txtResult.setMovementMethod(LinkMovementMethod.getInstance());
         txtResult.setText(spn);
 ```
-##Html.fromHtml / Html样式
-Html.fromHtml 返回的也是一个 Spaned 样式对象，主要用来把html标签转化为对应的文本样式，但只支持部分标签
+## Html.fromHtml / Html样式
+Html.fromHtml 返回的也是一个 Spaned 样式对象，主要用来把html标签转化为对应的文本样式，但只支持部分标签。图标标签没法直接解析，需要使用 Html.ImageGetter ,在 getDrawable 中处理图片，下面例子还实现了gif表情，需要的可以查看源代码。
 
 ![Html.fromHtml](https://github.com/YvanMao/TextStyle/blob/master/capture/htmlSpan.png)
 
