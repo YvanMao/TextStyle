@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huawei.works.videolive.textstyle.MainActivity">
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:scrollbars="vertical"
+        android:text="点击按钮切换样式"
+        android:fadeScrollbars="true"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtResult">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:flexWrap="wrap">
+
+            <Button
+                android:id="@+id/absoluteSizeSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大小样式" />
+
+            <Button
+                android:id="@+id/alignmentSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="对齐样式" />
+
+            <Button
+                android:id="@+id/backgroundColorSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="背景样式" />
+
+            <Button
+                android:id="@+id/bulletSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="着重样式" />
+
+            <Button
+                android:id="@+id/drawableMarginSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片+Margin样式" />
+
+            <Button
+                android:id="@+id/foregroundColorSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字体颜色" />
+
+            <Button
+                android:id="@+id/imageSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片样式" />
+
+            <Button
+                android:id="@+id/leadingMarginSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="文本缩进的样式" />
+
+            <Button
+                android:id="@+id/maskFilterSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="滤镜样式" />
+
+            <Button
+                android:id="@+id/quoteSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="引用样式" />
+
+            <Button
+                android:id="@+id/relativeSizeSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="相对大小样式" />
+
+            <Button
+                android:id="@+id/scaleXSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="横向缩放样式" />
+
+            <Button
+                android:id="@+id/strikethroughSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除线样式" />
+
+            <Button
+                android:id="@+id/styleSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字体风格样式" />
+
+            <Button
+                android:id="@+id/subscriptSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下标样式" />
+
+            <Button
+                android:id="@+id/superscriptSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上标样式" />
+
+            <Button
+                android:id="@+id/tabStopSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="制表位偏移样式" />
+
+            <Button
+                android:id="@+id/textAppearanceSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="style文件定义样式" />
+
+            <Button
+                android:id="@+id/typefaceSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字体样式" />
+
+            <Button
+                android:id="@+id/underlineSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下划线样式" />
+
+            <Button
+                android:id="@+id/urlSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="超链接样式" />
+
+            <Button
+                android:id="@+id/htmlSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Html样式" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
